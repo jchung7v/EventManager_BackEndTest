@@ -58,7 +58,10 @@ jobs:
       run: |
         pwd
         ls
-        zip ../release.zip ./* -r
+        zip release.zip ./* -r
+    
+    - name: List files in the current directory
+      run: ls -l
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
